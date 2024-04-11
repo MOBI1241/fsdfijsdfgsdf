@@ -1,4 +1,4 @@
-FROM python:3.11.9
+FROM python:3.11
 RUN apt update && apt upgrade -y
 RUN apt install git -y
 COPY requirements.txt /requirements.txt
