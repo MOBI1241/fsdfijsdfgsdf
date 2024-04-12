@@ -185,7 +185,7 @@ async def start(client, message):
         return
         
         
-    if len(message.command) == 2 and message.command[1] == "premium":
+if len(message.command) == 2 and message.command[1] == "premium":
     buttons = [
         [InlineKeyboardButton('📲 שלח צילום מסך ששילמת', url='https://t.me/your_bot_username')],
         [InlineKeyboardButton('❌ סגור ❌', callback_data='close_data')]
@@ -198,7 +198,6 @@ async def start(client, message):
         parse_mode=enums.ParseMode.HTML
     )
     return
-
 data = message.command[1]
 if data.split("-", 1)[0] == "Lucy":
     user_id = int(data.split("-", 1)[1])
